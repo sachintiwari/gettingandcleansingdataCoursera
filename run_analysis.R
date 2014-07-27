@@ -53,7 +53,7 @@ z<-rbind(dstest, dstrain)
 
 # Write the combined file
 
-write.csv(z, file='combineddata.txt', row.names=FALSE)
+write.table(z, file='combineddata.txt', row.names=FALSE)
 
 names(z)
 
@@ -64,4 +64,4 @@ tidyAverage <- dcast(combineddataMelt, subject + activity ~ variable, mean)
 # head(tidyAverage)
 # tail(tidyAverage)
 
-write.csv(tidyAverage, file='tidyAverage.txt', row.names=FALSE)
+write.table(tidyAverage, file='tidyAverage.txt', row.names=FALSE)
